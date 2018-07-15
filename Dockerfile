@@ -18,6 +18,7 @@ RUN  apk update \
   && passwd -d git
 
 COPY entrypoint.sh /usr/local/bin/
+RUN chomod a+x /usr/local/bin/entrypoint.sh
 
 EXPOSE 22
 VOLUME /git
